@@ -20,7 +20,7 @@
             <h1 v-text="mainHeading" id="Main_title"></h1>
 
             <section @click="isFlipped = !isFlipped" class="card">
-                <img v-if="!isFlipped" :src="packages[index].Image" :alt="packages[index].package">
+                <img v-if="!isFlipped" :src="packages[index].Image" :alt="packages[index].package" class="dog-image">
                 <h2 v-text="isFlipped ? '' : packages[index].package"></h2>
                 <p v-text="isFlipped ? packages[index].usage : ''"></p>
             </section>
@@ -28,78 +28,80 @@
                 <button @click="move(-1)" type="button">Previous</button>
                 <button @click="move(1)" type="button">Next</button>
             </div>
-
-            <p>
-                More information on this link:
-                <a :href="packages[index].link" v-text="packages[index].package" target="_blank"></a>
-            </p>
         </main>
+    </div>
 
-        <aside class="main-sidebar">
-            <!-- Your sidebar content remains unchanged -->
-            <h1>Welcome to DogSite, a haven for dog lovers!</h1>
-            <br>
-            <br>
+    <!-- <p>
+        More information on this link:
+        <a :href="packages[index].link" v-text="packages[index].package" target="_blank"></a>
+    </p> -->
+    </main>
 
-            <h2>Our passion for our canine companions drives us to share
-                valuable insights and resources with fellow enthusiasts. Discover a wealth of information on different
-                dog breeds, practical tips for optimal care, and nutrition advice to keep your furry friend happy and
-                healthy.</h2>
-            <br>
+    <aside class="main-sidebar">
+        <!-- Your sidebar content remains unchanged -->
+        <h1>Welcome to DogSite, a haven for dog lovers!</h1>
+        <br>
+        <br>
 
-            <h2>Whether you're a seasoned dog owner or contemplating the joy of having a four-legged companion,
-                DogSite is here to celebrate the bond between humans and dogs. Join our community, explore our content,
-                and share in the love for our loyal and lovable friends!</h2>
-            <br>
+        <h2>Our passion for our canine companions drives us to share
+            valuable insights and resources with fellow enthusiasts. Discover a wealth of information on different
+            dog breeds, practical tips for optimal care, and nutrition advice to keep your furry friend happy and
+            healthy.</h2>
+        <br>
+
+        <h2>Whether you're a seasoned dog owner or contemplating the joy of having a four-legged companion,
+            DogSite is here to celebrate the bond between humans and dogs. Join our community, explore our content,
+            and share in the love for our loyal and lovable friends!</h2>
+        <br>
 
 
-            <h2>
-                Age:
-            </h2>
+        <h2>
+            Age:
+        </h2>
 
-            <h3>
-                To calculate a dog's age, use the formula: human age = 16 x ln(dog age) + 31.
-            </h3>
-            <br>
+        <h3>
+            To calculate a dog's age, use the formula: human age = 16 x ln(dog age) + 31.
+        </h3>
+        <br>
 
-            <h1>
-                Race:
-            </h1>
+        <h1>
+            Race:
+        </h1>
 
-            <h3>If you're unsure about which breed is right for you, visit <a href="https://www.selectadogbreed.com/"
-                    target="_blank">Select a Dog Breed</a> for guidance.
-            </h3>
-            <br>
+        <h3>If you're unsure about which breed is right for you, visit <a href="https://www.selectadogbreed.com/"
+                target="_blank">Select a Dog Breed</a> for guidance.
+        </h3>
+        <br>
 
-            <h1>
-                Food:
-            </h1>
+        <h1>
+            Food:
+        </h1>
 
-            <h3>
-                Find the perfect food for your dog's breed. Consult your vet for personalized recommendations.
-            </h3>
-            <br>
+        <h3>
+            Find the perfect food for your dog's breed. Consult your vet for personalized recommendations.
+        </h3>
+        <br>
 
-            <h1>
-                Be sure:
-            </h1>
+        <h1>
+            Be sure:
+        </h1>
 
-            <h3>Owning a dog is a lifelong commitment. Treat them with love and care. Abandonment or harm is against the
-                law.
-            </h3>
+        <h3>Owning a dog is a lifelong commitment. Treat them with love and care. Abandonment or harm is against the
+            law.
+        </h3>
 
-            <!-- New paragraph -->
-            <!-- <p>
+        <!-- New paragraph -->
+        <!-- <p>
                 Explore DogSite to dive deep into the world of dogs! From heartwarming stories to practical advice,
                 we're here to enhance your dog-loving journey. Join our community discussions, share your experiences,
                 and become part of a passionate network of dog enthusiasts. Your furry friend deserves the best, and
                 DogSite is your go-to resource for all things dog-related!
             </p> -->
-        </aside>
+    </aside>
 
 
 
-        <footer>&copy; <span id="Year"></span> - Dog site made with Love by Godfrin_Louis & Mechlaoui_Fady</footer>
+    <footer>&copy; <span id="Year"></span> - Dog site made with Love by Godfrin_Louis & Mechlaoui_Fady</footer>
     </div>
 
     <!-- Calling the Vue Framework: -->
