@@ -217,3 +217,11 @@ main div span {
     height: auto; /* Maintain the aspect ratio */
 }
 
+
+.dog-links-info {
+    text-align: center; /* Center the text horizontally */
+}
+
+.indented-paragraph {
+    text-indent: 1.5em; /* Adjust the indentation as needed */
+}
