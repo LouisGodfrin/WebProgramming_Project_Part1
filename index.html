@@ -10,26 +10,33 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <h1>DogSite</h1>
-            <h2>For dog lover</h2>
-        </header>
+    <header>
+        <h1>DogSite</h1>
+        <h2>For dog lover</h2>
+    </header>
 
-        <main id="application" class="main-content">
-            <h1 v-text="mainHeading" id="Main_title"></h1>
+    <main id="application" class="main-content">
+        <h1 v-text="mainHeading" id="Main_title"></h1>
 
-            <section @click="isFlipped = !isFlipped" class="card">
-                <img v-if="!isFlipped" :src="packages[index].Image" :alt="packages[index].package" class="dog-image">
-                <h2 v-text="isFlipped ? '' : packages[index].package"></h2>
-                <p v-text="isFlipped ? packages[index].usage : ''"></p>
-            </section>
-            <div class="buttons">
-                <button @click="move(-1)" type="button">Previous</button>
-                <button @click="move(1)" type="button">Next</button>
-            </div>
-        </main>
-    </div>
+        <section @click="isFlipped = !isFlipped" class="card">
+            <img v-if="!isFlipped" :src="packages[index].Image" :alt="packages[index].package" class="dog-image">
+            <h2 v-text="isFlipped ? '' : packages[index].package"></h2>
+            <p v-text="isFlipped ? packages[index].usage : ''"></p>
+        </section>
+        <div class="buttons">
+            <button @click="move(-1)" type="button">Previous</button>
+            <button @click="move(1)" type="button">Next</button>
+        </div>
+
+        <p>
+            Photo of this dog on this link:
+            <a :href="packages[index].Image" v-text="packages[index].package" target="_blank"></a>
+            <br>
+            More information on this link:
+            <a :href="packages[index].link" v-text="packages[index].package" target="_blank"></a>
+        </p>
+
+    </main>
 
     <!-- <p>
         More information on this link:

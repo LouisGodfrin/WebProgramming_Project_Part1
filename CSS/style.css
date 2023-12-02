@@ -159,8 +159,8 @@ main div span {
 @media only screen and (max-width: 600px) {
 
     header {
-        background-color: darkkhaki;
-        color: rgb(87, 83, 28);
+        background-color: rgb(189, 126, 107);
+        color: rgb(54, 52, 29);
     }
 
 }
@@ -168,7 +168,7 @@ main div span {
 @media only screen and (min-width:601px) and (max-width:900px) {
 
     header {
-        background-color: darkorange;
+        background-color: rgb(21, 91, 32);
     }
 
     main.main-content {
@@ -216,3 +216,4 @@ main div span {
     width: 100%; /* Set a fixed width for all images */
     height: auto; /* Maintain the aspect ratio */
 }
+
