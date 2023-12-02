@@ -15,11 +15,12 @@
             <h1>DogSite</h1>
             <h2>For dog lover</h2>
         </header>
-        
+
         <main id="application" class="main-content">
-            <h1 v-text="mainHeading" id ="Main_title"></h1>
+            <h1 v-text="mainHeading" id="Main_title"></h1>
 
             <section @click="isFlipped = !isFlipped" class="card">
+                <img v-if="!isFlipped" :src="packages[index].Image" :alt="packages[index].package">
                 <h2 v-text="isFlipped ? '' : packages[index].package"></h2>
                 <p v-text="isFlipped ? packages[index].usage : ''"></p>
             </section>
@@ -29,43 +30,76 @@
             </div>
 
             <p>
-                Photo of this dog on this link:
-                <a :href="packages[index].Image" v-text="packages[index].package" target="_blank"></a>
-            <br>
                 More information on this link:
                 <a :href="packages[index].link" v-text="packages[index].package" target="_blank"></a>
             </p>
         </main>
 
         <aside class="main-sidebar">
-            <dl>
-                <dt>
-                    Age:
-                </dt>
-                <dd>To calculate a dog age we do: humain age = 16 x ln(dog age) + 31.
-                </dd>
+            <!-- Your sidebar content remains unchanged -->
+            <h1>Welcome to DogSite, a haven for dog lovers!</h1>
+            <br>
+            <br>
 
-                <dt>
-                    Race:
-                </dt>
-                <dd>If you are not sure about with breed take for you dog, go to this link: <a href ="https://www.selectadogbreed.com/">https://www.selectadogbreed.com/</a>
-                </dd>
+            <h2>Our passion for our canine companions drives us to share
+                valuable insights and resources with fellow enthusiasts. Discover a wealth of information on different
+                dog breeds, practical tips for optimal care, and nutrition advice to keep your furry friend happy and
+                healthy.</h2>
+            <br>
 
-                <dt>
-                    Food:
-                </dt>
-                <dd>You can find food for any breed of dog. But your dog maybe need special one, ask your vet to know.  
-                </dd>
+            <h2>Whether you're a seasoned dog owner or contemplating the joy of having a four-legged companion,
+                DogSite is here to celebrate the bond between humans and dogs. Join our community, explore our content,
+                and share in the love for our loyal and lovable friends!</h2>
+            <br>
 
-                <dt>
-                    Be sure:
-                </dt>
-                <dd>Have a dog, it's the same to have a kid. If you take a dog, it's not to abandon him or kill him. Morever it's punish by the law.
-                </dd>
-            </dl>
+
+            <h2>
+                Age:
+            </h2>
+
+            <h3>
+                To calculate a dog's age, use the formula: human age = 16 x ln(dog age) + 31.
+            </h3>
+            <br>
+
+            <h1>
+                Race:
+            </h1>
+
+            <h3>If you're unsure about which breed is right for you, visit <a href="https://www.selectadogbreed.com/"
+                    target="_blank">Select a Dog Breed</a> for guidance.
+            </h3>
+            <br>
+
+            <h1>
+                Food:
+            </h1>
+
+            <h3>
+                Find the perfect food for your dog's breed. Consult your vet for personalized recommendations.
+            </h3>
+            <br>
+
+            <h1>
+                Be sure:
+            </h1>
+
+            <h3>Owning a dog is a lifelong commitment. Treat them with love and care. Abandonment or harm is against the
+                law.
+            </h3>
+
+            <!-- New paragraph -->
+            <!-- <p>
+                Explore DogSite to dive deep into the world of dogs! From heartwarming stories to practical advice,
+                we're here to enhance your dog-loving journey. Join our community discussions, share your experiences,
+                and become part of a passionate network of dog enthusiasts. Your furry friend deserves the best, and
+                DogSite is your go-to resource for all things dog-related!
+            </p> -->
         </aside>
 
-        <footer>&copy; <span id="Year"></span> - Dog site by Godfrin_Louis </footer>
+
+
+        <footer>&copy; <span id="Year"></span> - Dog site made with Love by Godfrin_Louis & Mechlaoui_Fady</footer>
     </div>
 
     <!-- Calling the Vue Framework: -->
